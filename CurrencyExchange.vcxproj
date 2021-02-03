@@ -18,6 +18,20 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CurlData.cpp" />
+    <ClCompile Include="CurrencyConverter.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="APIRequestInterface.h" />
+    <ClInclude Include="CurlData.h" />
+    <ClInclude Include="CurrencyConverter.h" />
+    <ClInclude Include="ErrorMessages.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -138,10 +152,18 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="CurrencyExchange.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="packages\curl-vc140-static-32_64.7.53.0\build\native\curl-vc140-static-32_64.targets" Condition="Exists('packages\curl-vc140-static-32_64.7.53.0\build\native\curl-vc140-static-32_64.targets')" />
+    <Import Project="packages\openssl-vc140-static-32_64.1.1.0\build\native\openssl-vc140-static-32_64.targets" Condition="Exists('packages\openssl-vc140-static-32_64.1.1.0\build\native\openssl-vc140-static-32_64.targets')" />
+    <Import Project="packages\curlcpp-vc140-static-32_64.1.0.2\build\native\curlcpp-vc140-static-32_64.targets" Condition="Exists('packages\curlcpp-vc140-static-32_64.1.0.2\build\native\curlcpp-vc140-static-32_64.targets')" />
   </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\curl-vc140-static-32_64.7.53.0\build\native\curl-vc140-static-32_64.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\curl-vc140-static-32_64.7.53.0\build\native\curl-vc140-static-32_64.targets'))" />
+    <Error Condition="!Exists('packages\openssl-vc140-static-32_64.1.1.0\build\native\openssl-vc140-static-32_64.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\openssl-vc140-static-32_64.1.1.0\build\native\openssl-vc140-static-32_64.targets'))" />
+    <Error Condition="!Exists('packages\curlcpp-vc140-static-32_64.1.0.2\build\native\curlcpp-vc140-static-32_64.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\curlcpp-vc140-static-32_64.1.0.2\build\native\curlcpp-vc140-static-32_64.targets'))" />
+  </Target>
 </Project>
