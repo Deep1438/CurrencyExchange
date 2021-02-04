@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="CurlData.cpp" />
     <ClCompile Include="CurrencyConverter.cpp" />
+    <ClCompile Include="JSONData.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -28,6 +29,8 @@
     <ClInclude Include="CurlData.h" />
     <ClInclude Include="CurrencyConverter.h" />
     <ClInclude Include="ErrorMessages.h" />
+    <ClInclude Include="JSONData.h" />
+    <ClInclude Include="JSONRequestInterface.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -130,6 +133,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -157,6 +162,7 @@
     <Import Project="packages\curl-vc140-static-32_64.7.53.0\build\native\curl-vc140-static-32_64.targets" Condition="Exists('packages\curl-vc140-static-32_64.7.53.0\build\native\curl-vc140-static-32_64.targets')" />
     <Import Project="packages\openssl-vc140-static-32_64.1.1.0\build\native\openssl-vc140-static-32_64.targets" Condition="Exists('packages\openssl-vc140-static-32_64.1.1.0\build\native\openssl-vc140-static-32_64.targets')" />
     <Import Project="packages\curlcpp-vc140-static-32_64.1.0.2\build\native\curlcpp-vc140-static-32_64.targets" Condition="Exists('packages\curlcpp-vc140-static-32_64.1.0.2\build\native\curlcpp-vc140-static-32_64.targets')" />
+    <Import Project="packages\jsoncpp-vc140-static-32_64.1.8.0\build\native\jsoncpp-vc140-static-32_64.targets" Condition="Exists('packages\jsoncpp-vc140-static-32_64.1.8.0\build\native\jsoncpp-vc140-static-32_64.targets')" />
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
@@ -165,5 +171,6 @@
     <Error Condition="!Exists('packages\curl-vc140-static-32_64.7.53.0\build\native\curl-vc140-static-32_64.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\curl-vc140-static-32_64.7.53.0\build\native\curl-vc140-static-32_64.targets'))" />
     <Error Condition="!Exists('packages\openssl-vc140-static-32_64.1.1.0\build\native\openssl-vc140-static-32_64.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\openssl-vc140-static-32_64.1.1.0\build\native\openssl-vc140-static-32_64.targets'))" />
     <Error Condition="!Exists('packages\curlcpp-vc140-static-32_64.1.0.2\build\native\curlcpp-vc140-static-32_64.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\curlcpp-vc140-static-32_64.1.0.2\build\native\curlcpp-vc140-static-32_64.targets'))" />
+    <Error Condition="!Exists('packages\jsoncpp-vc140-static-32_64.1.8.0\build\native\jsoncpp-vc140-static-32_64.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\jsoncpp-vc140-static-32_64.1.8.0\build\native\jsoncpp-vc140-static-32_64.targets'))" />
   </Target>
 </Project>
