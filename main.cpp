@@ -37,9 +37,8 @@ int main()
 
 		//read data by accessing API URL
 		CurrencyConverter converter;
-		//resultValue = converter.convertCurrency(amount, baseCurrency, targetCurrency, errorMsg);
-		if (errorMsg != "")
-		{
+		resultValue = converter.convertCurrency(amount, baseCurrency, targetCurrency, errorMsg);
+		if (errorMsg != ""){
 			cout << errorMsg << endl;
 		}
 		else {

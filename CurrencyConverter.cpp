@@ -8,6 +8,7 @@ CurrencyConverter::CurrencyConverter()
 	m_currencyData = "";
 	m_resultValue = 0.0;
 	m_curlObj = unique_ptr<APIRequestInterface>(new CurlData());
+	m_jsonObj = unique_ptr<JSONRequestInterface>(new JSONData());
 }
 
 /// <summary>
@@ -29,5 +30,8 @@ CurrencyConverter :: ~CurrencyConverter()
 double CurrencyConverter::convertCurrency(const float& amount, const string& baseCy, const string& targetCy, string& errorMsg)
 {
 	m_currencyData = m_curlObj->executeAPIRequest(baseCy, targetCy, errorMsg);
-	return 0; //Need to modify
+	//check for curl error message 
+	m_resultValue = m_jsonObj->executeJSONParseRequest(m_currencyData, targetCy, errorMsg);
+	m_resultValue = m_resultValue * amount;
+	return m_resultValue;
 }
