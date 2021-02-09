@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{40c3cec8-546a-4278-889b-7e4b3b4ee2bc}</ProjectGuid>
+    <ProjectGuid>{723e242f-da15-4656-9c3f-2f5f7fb250d3}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
     <ConfigurationType>Application</ConfigurationType>
@@ -46,7 +46,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CurrencyExchange\CurrencyExchange.vcxproj">
+    <ProjectReference Include="..\CurrencyExchange.vcxproj">
       <Project>{fed61b4d-748a-42cc-871b-1a59fb18d38c}</Project>
     </ProjectReference>
   </ItemGroup>
@@ -56,11 +56,11 @@
   <ItemDefinitionGroup />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
-    <Import Project="..\CurrencyExchange\packages\gmock.1.10.0\build\native\gmock.targets" Condition="Exists('..\CurrencyExchange\packages\gmock.1.10.0\build\native\gmock.targets')" />
-    <Import Project="..\CurrencyExchange\packages\curl-vc140-static-32_64.7.53.0\build\native\curl-vc140-static-32_64.targets" Condition="Exists('..\CurrencyExchange\packages\curl-vc140-static-32_64.7.53.0\build\native\curl-vc140-static-32_64.targets')" />
-    <Import Project="..\CurrencyExchange\packages\jsoncpp-vc140-static-32_64.1.8.0\build\native\jsoncpp-vc140-static-32_64.targets" Condition="Exists('..\CurrencyExchange\packages\jsoncpp-vc140-static-32_64.1.8.0\build\native\jsoncpp-vc140-static-32_64.targets')" />
-    <Import Project="..\CurrencyExchange\packages\openssl-vc140-static-32_64.1.1.0\build\native\openssl-vc140-static-32_64.targets" Condition="Exists('..\CurrencyExchange\packages\openssl-vc140-static-32_64.1.1.0\build\native\openssl-vc140-static-32_64.targets')" />
-    <Import Project="..\CurrencyExchange\packages\curlcpp-vc140-static-32_64.1.0.2\build\native\curlcpp-vc140-static-32_64.targets" Condition="Exists('..\CurrencyExchange\packages\curlcpp-vc140-static-32_64.1.0.2\build\native\curlcpp-vc140-static-32_64.targets')" />
+    <Import Project="..\packages\gmock.1.10.0\build\native\gmock.targets" Condition="Exists('..\packages\gmock.1.10.0\build\native\gmock.targets')" />
+    <Import Project="..\packages\jsoncpp-vc140-static-32_64.1.8.0\build\native\jsoncpp-vc140-static-32_64.targets" Condition="Exists('..\packages\jsoncpp-vc140-static-32_64.1.8.0\build\native\jsoncpp-vc140-static-32_64.targets')" />
+    <Import Project="..\packages\curl-vc140-static-32_64.7.53.0\build\native\curl-vc140-static-32_64.targets" Condition="Exists('..\packages\curl-vc140-static-32_64.7.53.0\build\native\curl-vc140-static-32_64.targets')" />
+    <Import Project="..\packages\curlcpp-vc140-static-32_64.1.0.2\build\native\curlcpp-vc140-static-32_64.targets" Condition="Exists('..\packages\curlcpp-vc140-static-32_64.1.0.2\build\native\curlcpp-vc140-static-32_64.targets')" />
+    <Import Project="..\packages\openssl-vc140-static-32_64.1.1.1.1\build\native\openssl-vc140-static-32_64.targets" Condition="Exists('..\packages\openssl-vc140-static-32_64.1.1.1.1\build\native\openssl-vc140-static-32_64.targets')" />
   </ImportGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -128,10 +128,10 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\CurrencyExchange\packages\gmock.1.10.0\build\native\gmock.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\CurrencyExchange\packages\gmock.1.10.0\build\native\gmock.targets'))" />
-    <Error Condition="!Exists('..\CurrencyExchange\packages\curl-vc140-static-32_64.7.53.0\build\native\curl-vc140-static-32_64.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\CurrencyExchange\packages\curl-vc140-static-32_64.7.53.0\build\native\curl-vc140-static-32_64.targets'))" />
-    <Error Condition="!Exists('..\CurrencyExchange\packages\jsoncpp-vc140-static-32_64.1.8.0\build\native\jsoncpp-vc140-static-32_64.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\CurrencyExchange\packages\jsoncpp-vc140-static-32_64.1.8.0\build\native\jsoncpp-vc140-static-32_64.targets'))" />
-    <Error Condition="!Exists('..\CurrencyExchange\packages\openssl-vc140-static-32_64.1.1.0\build\native\openssl-vc140-static-32_64.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\CurrencyExchange\packages\openssl-vc140-static-32_64.1.1.0\build\native\openssl-vc140-static-32_64.targets'))" />
-    <Error Condition="!Exists('..\CurrencyExchange\packages\curlcpp-vc140-static-32_64.1.0.2\build\native\curlcpp-vc140-static-32_64.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\CurrencyExchange\packages\curlcpp-vc140-static-32_64.1.0.2\build\native\curlcpp-vc140-static-32_64.targets'))" />
+    <Error Condition="!Exists('..\packages\gmock.1.10.0\build\native\gmock.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\gmock.1.10.0\build\native\gmock.targets'))" />
+    <Error Condition="!Exists('..\packages\jsoncpp-vc140-static-32_64.1.8.0\build\native\jsoncpp-vc140-static-32_64.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\jsoncpp-vc140-static-32_64.1.8.0\build\native\jsoncpp-vc140-static-32_64.targets'))" />
+    <Error Condition="!Exists('..\packages\curl-vc140-static-32_64.7.53.0\build\native\curl-vc140-static-32_64.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\curl-vc140-static-32_64.7.53.0\build\native\curl-vc140-static-32_64.targets'))" />
+    <Error Condition="!Exists('..\packages\curlcpp-vc140-static-32_64.1.0.2\build\native\curlcpp-vc140-static-32_64.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\curlcpp-vc140-static-32_64.1.0.2\build\native\curlcpp-vc140-static-32_64.targets'))" />
+    <Error Condition="!Exists('..\packages\openssl-vc140-static-32_64.1.1.1.1\build\native\openssl-vc140-static-32_64.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\openssl-vc140-static-32_64.1.1.1.1\build\native\openssl-vc140-static-32_64.targets'))" />
   </Target>
 </Project>

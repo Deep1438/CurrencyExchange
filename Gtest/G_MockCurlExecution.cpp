@@ -1,6 +1,6 @@
 #include "pch.h"
 #include "G_MockCurlInterface.h"
-#include "../CurrencyExchange/CurrencyConverter.h"
+#include "../../CurrencyExchange/CurrencyConverter.h"
 
 using ::testing::_;
 using ::testing::Test;
