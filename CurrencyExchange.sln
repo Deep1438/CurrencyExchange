@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CurrencyExchange", "CurrencyExchange.vcxproj", "{FED61B4D-748A-42CC-871B-1A59FB18D38C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Gtest", "..\Gtest\Gtest.vcxproj", "{40C3CEC8-546A-4278-889B-7E4B3B4EE2BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{FED61B4D-748A-42CC-871B-1A59FB18D38C}.Release|x64.Build.0 = Release|x64
 		{FED61B4D-748A-42CC-871B-1A59FB18D38C}.Release|x86.ActiveCfg = Release|Win32
 		{FED61B4D-748A-42CC-871B-1A59FB18D38C}.Release|x86.Build.0 = Release|Win32
+		{40C3CEC8-546A-4278-889B-7E4B3B4EE2BC}.Debug|x64.ActiveCfg = Debug|x64
+		{40C3CEC8-546A-4278-889B-7E4B3B4EE2BC}.Debug|x64.Build.0 = Debug|x64
+		{40C3CEC8-546A-4278-889B-7E4B3B4EE2BC}.Debug|x86.ActiveCfg = Debug|Win32
+		{40C3CEC8-546A-4278-889B-7E4B3B4EE2BC}.Debug|x86.Build.0 = Debug|Win32
+		{40C3CEC8-546A-4278-889B-7E4B3B4EE2BC}.Release|x64.ActiveCfg = Release|x64
+		{40C3CEC8-546A-4278-889B-7E4B3B4EE2BC}.Release|x64.Build.0 = Release|x64
+		{40C3CEC8-546A-4278-889B-7E4B3B4EE2BC}.Release|x86.ActiveCfg = Release|Win32
+		{40C3CEC8-546A-4278-889B-7E4B3B4EE2BC}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
