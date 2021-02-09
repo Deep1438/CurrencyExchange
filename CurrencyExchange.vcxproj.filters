@@ -21,10 +21,10 @@
     <ClCompile Include="CurrencyConverter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CurlData.cpp">
+    <ClCompile Include="restCurl\CurlData.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="JSONData.cpp">
+    <ClCompile Include="jsonParser\JSONData.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -35,16 +35,16 @@
     <ClInclude Include="CurrencyConverter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="APIRequestInterface.h">
+    <ClInclude Include="interfaces\APIRequestInterface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CurlData.h">
+    <ClInclude Include="interfaces\JSONRequestInterface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="JSONRequestInterface.h">
+    <ClInclude Include="restCurl\CurlData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="JSONData.h">
+    <ClInclude Include="jsonParser\JSONData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

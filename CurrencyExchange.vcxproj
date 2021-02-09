@@ -19,18 +19,18 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CurlData.cpp" />
     <ClCompile Include="CurrencyConverter.cpp" />
-    <ClCompile Include="JSONData.cpp" />
+    <ClCompile Include="jsonParser\JSONData.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="restCurl\CurlData.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="APIRequestInterface.h" />
-    <ClInclude Include="CurlData.h" />
     <ClInclude Include="CurrencyConverter.h" />
     <ClInclude Include="ErrorMessages.h" />
-    <ClInclude Include="JSONData.h" />
-    <ClInclude Include="JSONRequestInterface.h" />
+    <ClInclude Include="interfaces\APIRequestInterface.h" />
+    <ClInclude Include="interfaces\JSONRequestInterface.h" />
+    <ClInclude Include="jsonParser\JSONData.h" />
+    <ClInclude Include="restCurl\CurlData.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

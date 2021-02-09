@@ -1,5 +1,5 @@
 #pragma once
-#include"APIRequestInterface.h"
+#include"../../CurrencyExchange/interfaces/APIRequestInterface.h"
 #include"curl/curl.h"
 
 class CurlData : public APIRequestInterface

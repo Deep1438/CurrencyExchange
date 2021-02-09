@@ -1,7 +1,7 @@
 #pragma once
 #include"ErrorMessages.h"
-#include"CurlData.h"
-#include"JSONData.h"
+#include"../CurrencyExchange/restCurl/CurlData.h"
+#include"../CurrencyExchange/jsonParser/JSONData.h"
 
 class CurrencyConverter {
 	string m_currencyData;

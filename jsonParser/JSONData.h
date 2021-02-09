@@ -1,7 +1,6 @@
 #pragma once
 #include"json/json.h"
-#include"ErrorMessages.h"
-#include"JSONRequestInterface.h"
+#include"../../CurrencyExchange/interfaces/JSONRequestInterface.h"
 
 class JSONData : public JSONRequestInterface
 {
