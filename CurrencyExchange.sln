@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CurrencyExchange", "CurrencyExchange.vcxproj", "{FED61B4D-748A-42CC-871B-1A59FB18D38C}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Gtest", "..\Gtest\Gtest.vcxproj", "{40C3CEC8-546A-4278-889B-7E4B3B4EE2BC}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Gtest", "Gtest\Gtest.vcxproj", "{40C3CEC8-546A-4278-889B-7E4B3B4EE2BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
